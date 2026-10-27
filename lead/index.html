@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daily Ten · Leader</title>
+<meta name="description" content="Ten minutes a day of Copilot experiments for leaders: tame the inbox, walk in prepared, talk first and write second.">
+<meta name="theme-color" content="#1f3b57">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Daily Ten L">
+<link rel="stylesheet" href="../styles.css">
+<style>
+/* Leader edition: navy instead of teal */
+:root { --brand: #1f3b57; --brand-soft: #e3eaf2; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --brand: #8fb4d9; --brand-soft: #1e2d3d; --brand-ink: #0e1620; } }
+</style>
+</head>
+<body>
+<main id="app"></main>
+<nav class="tabs" id="tabs" hidden>
+  <a href="#/today" data-tab="today"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Today</a>
+  <a href="#/path" data-tab="path"><svg viewBox="0 0 24 24"><path d="M4 19c4 0 4-6 8-6s4-6 8-6"/><circle cx="4" cy="19" r="1.6"/><circle cx="20" cy="7" r="1.6"/></svg>Path</a>
+  <a href="#/quick" data-tab="quick"><svg viewBox="0 0 24 24"><path d="M13 3 5 14h6l-1 7 8-11h-6z"/></svg>2-min wins</a>
+  <a href="#/library" data-tab="library"><svg viewBox="0 0 24 24"><path d="M5 4h10l4 4v12H5z"/><path d="M9 12h6M9 16h6"/></svg>Library</a>
+  <a href="#/guide" data-tab="guide"><svg viewBox="0 0 24 24"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M3 20c0-3 2.2-5 5-5s5 2 5 5M11 20c0-3 2.2-5 5-5s5 2 5 5"/></svg>Guide</a>
+</nav>
+<div class="toast" id="toast"></div>
+<script src="content.js"></script>
+<script src="../app.js"></script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 // Daily Ten — offline service worker (network-first so updates reach installed users)
-const CACHE = 'dt-v2';
-const ASSETS = ['./', './index.html', './content.js', './manifest.webmanifest', './icon-192.png', './icon-512.png', './icon.svg', './icon-180.png'];
+const CACHE = 'dt-v3';
+const ASSETS = ['./', './index.html', './content.js', './app.js', './styles.css', './manifest.webmanifest', './icon-192.png', './icon-512.png', './icon.svg', './icon-180.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting()));
